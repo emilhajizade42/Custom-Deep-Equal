@@ -42,27 +42,27 @@ function deepEquals(obj1, obj2) {
 }
 
 deepEquals(1, 1); // true
-console.log(deepEquals(1, 1));
+console.log("True",deepEquals(1, 1));
 deepEquals(1, "1"); // false
-console.log(deepEquals(1, "1"));
+console.log("false",deepEquals(1, "1"));
 deepEquals(null, null); // true
-console.log(deepEquals(null, null));
+console.log("True",deepEquals(null, null));
 deepEquals(null, undefined); // false
-console.log(deepEquals(null, undefined));
+console.log("false",deepEquals(null, undefined));
 deepEquals([], []); // true
-console.log(deepEquals([], []));
+console.log("True",deepEquals([], []));
 deepEquals({}, {}); // true
-console.log(deepEquals({}, {}));
+console.log("True",deepEquals({}, {}));
 deepEquals([], {}); // false
-console.log("[],{}",deepEquals([], {}));
+console.log("false",deepEquals([], {}));
 deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, 5, 6]}}); // true
-console.log(deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, 5, 6]}}));
+console.log("True",deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, 5, 6]}}));
 deepEquals({a: 123, b: {c: [4, 5, 6]}}, {b: {c: [4, 5, 6]}}); // false
-console.log(deepEquals({a: 123, b: {c: [4, 5, 6]}}, {b: {c: [4, 5, 6]}}));
+console.log("false",deepEquals({a: 123, b: {c: [4, 5, 6]}}, {b: {c: [4, 5, 6]}}));
 deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, '5', 6]}}); // false
-console.log(deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, '5', 6]}}));
+console.log("false",deepEquals({a: 123, b: {c: [4, 5, 6]}}, {a: 123, b: {c: [4, '5', 6]}}));
 deepEquals([1, 2, [3, 4],1], [1, 2, [3, 4]]); // true
-console.log(deepEquals([1, 2, [3, 4],1], [1, 2, [3, 4]]));
+console.log("True",deepEquals([1, 2, [3, 4]], [1, 2, [3, 4]]));
 
 deepEquals([1, 2, [3, 4, {a: 'abc'}]], [1, 2, [3, 4, {a: 'abc'}]]); // true
-console.log(deepEquals([1, 2, [3, 4, {a: 'abc'}]], [1, 2, [3, 4, {a: 'abc'}]]));
+console.log("True",deepEquals([1, 2, [3, 4, {a: 'abc'}]], [1, 2, [3, 4, {a: 'abc'}]]));
